@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "hero">
+           
+               
+       
+        <div class ="navbar">
+           
+            ,<button type="button">Sign Up</button>
+        </div>
+        <div class = " content">
+            <small>welcome to my website</small>
+            <h1>The Galaxy<br>Awaits You</h1>
+            <button>Take A Tour</button>
+        </div>
+        <div class= "side-bar">
+            <img src="menu.png" class = "menu">
+
+        </div>
+         <div class = "social-media">
+            <img src="instagram.png" class = "insta">
+            <img src="twitter.png" class="twitter">
+            <img src="facebook-app-symbol.png" class="fb">
+         </div>
+         <style>
+          body {
+            margin: 0;
+            overflow: hidden;
+          }
+      
+          .star {
+            position: absolute;
+            width: 3px;
+            height: 2px;
+            background-color: white;
+            animation: shooting-stars 100s linear infinite;
+            opacity: 0;
+          }
+      
+          @keyframes shooting-stars {
+            from {
+              opacity: 1;
+              transform: translateY(0) translateX(0);
+            }
+            to {
+              opacity: 0;
+              transform: translateY(100vh) translateX(100vw);
+            }
+          }
+        </style>
+      </head>
+      <body>
+        <script>
+          function createStars() {
+            const starContainer = document.body;
+            const numberOfStars = 70;
+      
+            for (let i = 0; i < numberOfStars; i++) {
+              const star = document.createElement('div');
+              star.className = 'star';
+              star.style.top = `${Math.random() * window.innerHeight}px`;
+              star.style.left = `${Math.random() * window.innerWidth}px`;
+              star.style.animationDuration = `${Math.random() * 6 + 7}s`; // Random duration for variety
+              starContainer.appendChild(star);
+            }
+          }
+      
+          window.onload = createStars;
+        </script>
+         
+
+        
+    </div>
+    
+</body>
+</html>
